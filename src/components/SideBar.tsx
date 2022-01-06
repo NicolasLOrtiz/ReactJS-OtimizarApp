@@ -1,4 +1,5 @@
 import { Button } from "./Button";
+import {memo} from "react";
 
 interface SideBarProps {
   genres: Array<{
@@ -10,11 +11,11 @@ interface SideBarProps {
   buttonClickCallback: (args: any) => void;
 }
 
-export function SideBar({
+export const SideBar = ({
   genres,
   selectedGenreId,
   buttonClickCallback
-}: SideBarProps) {
+}: SideBarProps) => {
   return (
     <nav className="sidebar">
       <span>Watch<p>Me</p></span>
